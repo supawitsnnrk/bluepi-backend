@@ -1,0 +1,33 @@
+version: '3.8'
+services:
+  bluepi-testing-service:
+    restart: always
+    container_name: bluepi-testing-service
+    build: .
+    volumes:
+      - ./:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - 9000:3000
+    environment:
+      - DB_HOST=host.docker.internal
+      - DB_PORT=15431
+      - DB_USERNAME=postgres
+      - DB_PASSWORD=password
+      - DB_NAME=bluepi-testing-service
+    depends_on:
+      - postgres
+    links:
+      - postgres
+    command: sh -c 'yarn migration && yarn start:debug'
+  postgres:
+    container_name: bluepi-testing-service-db
+    image: postgres:14.2-alpine
+    ports:
+      - 15431:5432
+    volumes:
+      - ~/apps/postgres/bluepi-testing-service:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=bluepi-testing-service
