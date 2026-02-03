@@ -420,5 +420,3 @@ curl -X PATCH http://localhost:9000/api/cash/stock/{denominationId} \
 This project is [MIT licensed](LICENSE).
 
 ---
-
-**Built with ❤️ using NestJS**
