@@ -11,7 +11,7 @@ REST API สำหรับระบบตู้ขายสินค้าอ�
 - ✅ **Transaction Safety** - ใช้ Database Transaction ป้องกันข้อมูลผิดพลาด
 - ✅ **Validation** - ตรวจสอบ input ทุก request ด้วย class-validator
 - ✅ **Logging** - บันทึก log ทุก function call เพื่อ debugging
-- ✅ **Test Coverage** - Unit tests และ E2E tests ครอบคลุม
+- ✅ **Test Coverage** - Unit tests ครอบคลุม
 
 ## 🛠️ Tech Stack
 
@@ -37,8 +37,8 @@ REST API สำหรับระบบตู้ขายสินค้าอ�
 ### 1. Clone โปรเจค
 
 ```bash
-git clone <repository-url>
-cd bluepi-testing
+git clone https://github.com/supawitsnnrk/bluepi-backend
+cd bluepi-backend
 ```
 
 ### 2. ติดตั้ง Dependencies
