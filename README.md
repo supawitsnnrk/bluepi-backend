@@ -37,7 +37,7 @@ REST API สำหรับระบบตู้ขายสินค้าอ�
 ### 1. Clone โปรเจค
 
 ```bash
-git clone https://github.com/supawitsnnrk/bluepi-backend
+git clone https://github.com/supawitsnnrk/bluepi-backend.git
 cd bluepi-backend
 ```
 
